@@ -1,0 +1,46 @@
+It is my main code that i want to test it in python by pytest packege 
+
+def __init__(self):
+	print("this is calculator class constructor")
+
+def addition(*numbers):
+	sum=0
+	for(number in numbers):
+		sum+=number
+	return sum
+
+
+def subtruction(max,min):
+	return max-min
+
+
+def multiplacation(*numbers):
+	result=1
+	for number in numbers:
+		result*=number
+	return result
+
+def divition(num1,num2):
+	return num1/num2
+
+def reverse_name(name):
+	return name[::-1]
+
+
+
+It is Test code that test the code.
+
+
+import pytest
+import simpleprogram
+
+def test():
+    assert simpleprogram.addition(2,2,3,5,5)==17
+
+def test1():
+    assert simpleprogram.subtruction(20,10)==10
+
+def test2():
+    assert simpleprogram.divition(15,3)==5
+def test3():
+    assert simpleprogram.reverse_name("khalid")=="dilahk"
